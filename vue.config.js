@@ -3,9 +3,10 @@ module.exports = {
     loaderOptions: {
       sass: {
         prependData: `
-          @import '@/assets/scss/normalize/normalize.scss';
+          @import '@/assets/fonts/fonts.scss';
           @import '@/assets/scss/settings/mixins.scss';
           @import '@/assets/scss/settings/variables.scss';
+          @import '@/assets/scss/normalize/normalize.scss';
           @import '@/assets/scss/global.scss';
         `
       }

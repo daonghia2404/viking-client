@@ -1,30 +1,39 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import DangNhap from '../views/DangNhap.vue'
+import DangKy from '../views/DangKy.vue'
+import QuenMatKhau from '../views/QuenMatKhau.vue'
+import DoiMatKhau from '../views/DoiMatKhau.vue'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
-    component: Home
+    path: '/dang-nhap',
+    name: 'DangNhap',
+    component: DangNhap
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    path: '/dang-ky',
+    name: 'DangKy',
+    component: DangKy
+  },
+  {
+    path: '/quen-mat-khau',
+    name: 'QuenMatKhau',
+    component: QuenMatKhau
+  },
+  {
+    path: '/doi-mat-khau/:token',
+    name: 'DoiMatKhau',
+    component: DoiMatKhau
   }
-];
+]
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
-});
+})
 
-export default router;
+export default router
