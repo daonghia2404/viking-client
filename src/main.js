@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'ant-design-vue/dist/antd.css'
+import 'vue-date-pick/dist/vueDatePick.css'
 import './assets/scss/global.scss'
 
 Vue.config.productionTip = false

@@ -19,3 +19,90 @@ li {
   margin: 0;
   padding: 0;
 }
+
+body {
+  background: $gray-light;
+}
+
+.primary-color {
+  color: $primary;
+}
+
+.vdpComponent {
+  .vdpArrowPrev:after {
+    border-right-color: $primary;
+  }
+  .vdpArrowNext:after {
+    border-left-color: $primary;
+  }
+  .vdpCell {
+    &.selected {
+      .vdpCellContent {
+        background: $primary;
+      }
+    }
+    &:hover {
+      .vdpCellContent {
+        background: $lightblue;
+        color: $white;
+      }
+    }
+    &.today {
+      .vdpCellContent {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.custom-button {
+  @include box-shadow;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  span {
+    font-family: 'Rajdhani-SemiBold';
+  }
+  svg {
+    width: 20px;
+    fill: $gray;
+  }
+  &.square {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &.primary {
+    background: $primary;
+    &:hover {
+      background: $primary-dark;
+    }
+    span {
+      color: $white;
+    }
+  }
+  &.secondary {
+    background: $lightblue;
+    &:hover {
+      background: darken($lightblue, 3%);
+    }
+    span {
+      color: $white;
+    }
+    svg {
+      fill: $white;
+    }
+  }
+}
+
+.custom-tooltip {
+  .ant-tooltip-inner {
+    font-family: 'Rajdhani-SemiBold';
+  }
+}

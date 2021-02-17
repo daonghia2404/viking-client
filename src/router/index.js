@@ -4,6 +4,7 @@ import DangNhap from '../views/DangNhap.vue'
 import DangKy from '../views/DangKy.vue'
 import QuenMatKhau from '../views/QuenMatKhau.vue'
 import DoiMatKhau from '../views/DoiMatKhau.vue'
+import NewFeed from '../views/NewFeed.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/doi-mat-khau/:token',
     name: 'DoiMatKhau',
     component: DoiMatKhau
+  },
+  {
+    path: '/',
+    name: 'NewFeed',
+    component: NewFeed
   }
 ]
 
