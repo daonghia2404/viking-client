@@ -14,6 +14,8 @@ export default {
 
 <style lang="scss" scoped>
 .avatar {
+  flex: 0 0 40px;
+  max-width: 40px;
   width: 40px;
   height: 45px;
   position: relative;

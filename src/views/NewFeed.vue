@@ -129,6 +129,10 @@
               </div>
             </div>
           </div>
+
+          <div class="newfeed-lists-wrapper">
+            <NewfeedComponent />
+          </div>
         </div>
       </div>
     </div>
@@ -140,6 +144,7 @@ import Vue from 'vue'
 import { Button, Input, Upload } from 'ant-design-vue'
 import DatePick from 'vue-date-pick'
 import AuthLayout from '@/layouts/auth-layout/AuthLayout'
+import NewfeedComponent from '@/components/newfeed/newfeed'
 
 Vue.use(Button)
 Vue.use(Input)
@@ -149,7 +154,8 @@ export default {
   name: 'NewFeedPage',
   components: {
     AuthLayout,
-    DatePick
+    DatePick,
+    NewfeedComponent
   },
   data: () => ({
     date: '2021-02-03'
